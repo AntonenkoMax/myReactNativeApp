@@ -1,0 +1,17 @@
+export enum ConditionEnum {
+  Thunderstorm = "Thunderstorm",
+  Drizzle = "Drizzle",
+  Rain = "Rain",
+  Snow = "Snow",
+  Clear = "Clear",
+  Mist = "Mist",
+  Tornado = "Tornado",
+  Squall = "Squall",
+  Ash = "Ash",
+  Sand = "Sand",
+  Fog = "Fog",
+  Dust = "Dust",
+  Haze = "Haze",
+  Smoke = "Smoke",
+  Clouds = "Clouds",
+}
