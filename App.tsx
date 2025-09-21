@@ -52,7 +52,7 @@ const App = () => {
     getCurrentLocation();
   }, []);
 
-  console.log('weather?.weather[0].main ?? ConditionEnum.Clear', weather?.weather[0].main ?? ConditionEnum.Clear);
+  console.log("weather?.weather[0].main ?? ConditionEnum.Clear", weather?.weather[0].main ?? ConditionEnum.Clear);
 
 
   return (

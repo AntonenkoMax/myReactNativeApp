@@ -23,7 +23,10 @@ const Weather: FC<WeatherProps> = ({ temp, condition }) => {
         <Text style={styles.temp}>{Math.round(temp)}°</Text>
         <Text>{condition}</Text>
       </View>
-      <View style={styles.halfContainer}></View>
+      <View style={{...styles.halfContainer, ...styles.textContainer}}>
+        <Text style={styles.title}>{weatherOptions[condition].title}</Text>
+        <Text style={styles.subtitle}>{weatherOptions[condition].subtitle}</Text>
+      </View>
     </LinearGradient>
   );
 };
@@ -33,16 +36,33 @@ export default Weather;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center"
+    // justifyContent: "center",
+    // alignItems: "center"
   },
   temp: {
     fontSize: 42,
-    color: 'white'
+    color: "white"
   },
   halfContainer: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center"
-  }
+  },
+  textContainer: {
+    paddingHorizontal: 20,
+    alignItems: "flex-start"
+  },
+  title: {
+    color: 'white',
+    fontSize: 44,
+    fontWeight: '300',
+    marginBottom: 10,
+    textAlign: "left",
+  },
+  subtitle: {
+    color: 'white',
+    fontWeight: '600',
+    fontSize: 24,
+    textAlign: "left",
+  },
 });
